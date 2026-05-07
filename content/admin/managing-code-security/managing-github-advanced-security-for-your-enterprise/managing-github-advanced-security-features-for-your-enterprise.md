@@ -1,29 +1,25 @@
 ---
 title: Managing {% data variables.product.prodname_GHAS %} features for your enterprise
-intro: 'You can control {% data variables.product.prodname_GHAS %} features that secure and analyze code across all organizations owned by your enterprise.'
-permissions: 'Enterprise owners can manage {% data variables.product.prodname_AS %} features for organizations in an enterprise.'
+intro: You can control {% data variables.product.prodname_GHAS %} features that secure and analyze code across all organizations owned by your enterprise.
+permissions: Enterprise owners can manage {% data variables.product.prodname_AS %} features for organizations in an enterprise.
 allowTitleToDifferFromFilename: true
 versions:
-  ghes: '<= 3.15'
-type: how_to
-topics:
-  - Alerts
-  - Advanced Security
-  - Dependency graph
-  - Secret scanning
-  - Repositories
+  ghes: '<=3.15'
 shortTitle: Manage {% data variables.product.prodname_GHAS %}
 redirect_from:
   - /admin/code-security/managing-github-advanced-security-for-your-enterprise/managing-github-advanced-security-features-for-your-enterprise
+contentType: how-tos
+category:
+  - Secure and govern your enterprise
 ---
 
 ## About management of {% data variables.product.prodname_AS %} features
 
 You can use {% data variables.product.prodname_AS %} features to harden security for the organizations in your enterprise.
 
-{% ifversion security-configurations %}{% data reusables.security-configurations.enable-security-features-with-gh-config %}
+{% data reusables.security-configurations.enable-security-features-with-gh-config %}
 
-To manage individual {% data variables.product.prodname_GHAS %} features, {% else %}To streamline management of {% data variables.product.prodname_AS %}, {% endif %}you can enable or disable each feature for all existing and/or new repositories within the organizations owned by your enterprise.
+To manage individual {% data variables.product.prodname_GHAS %} features, you can enable or disable each feature for all existing and/or new repositories within the organizations owned by your enterprise.
 
 {% ifversion security-configurations-ghes-only %}
 
@@ -53,8 +49,8 @@ When you enable one or more security and analysis features for existing reposito
 
    * To the right of the feature, click **Disable all** or **Enable all**. If the control for "{% data variables.product.prodname_GHAS %}" is disabled, you have no available licenses for {% data variables.product.prodname_GHAS %}.
    * To confirm the change, click the **Enable/Disable all** or **Enable/Disable for eligible repositories** button in the dialog that is displayed.
-1. Optionally, to enable or disable a feature automatically when new private and internal repositories{% ifversion secret-scanning-user-owned-repos %}, user namespace repositories{% endif %}, or public repositories and repositories with {% data variables.product.prodname_GHAS %} enabled are created, select the checkbox below the feature.{% ifversion org-npp-enablement-security-configurations %}
-1. Optionally, to enable the scanning of non-provider patterns, to the right of "Scan for non-provider patterns", click **Enable all**. To learn more about scanning for non-provider patterns, see [AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#non-provider-patterns) and [AUTOTITLE](/code-security/secret-scanning/managing-alerts-from-secret-scanning/viewing-alerts).{% endif %}
+1. Optionally, to enable or disable a feature automatically when new private and internal repositories{% ifversion secret-scanning-user-owned-repos %}, user namespace repositories{% endif %}, or public repositories and repositories with {% data variables.product.prodname_GHAS %} enabled are created, select the checkbox below the feature.
+1. Optionally, to enable the scanning of non-provider patterns, to the right of "Scan for non-provider patterns", click **Enable all**. To learn more about scanning for non-provider patterns, see [AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#non-provider-patterns) and [AUTOTITLE](/code-security/secret-scanning/managing-alerts-from-secret-scanning/viewing-alerts).
 1. Optionally, to include a resource link in the message that members will see when they attempt to push a secret, select **Add a resource link in the CLI and web UI when a commit is blocked**, then type a URL, and click **Save link**.
 
    > [!NOTE]
