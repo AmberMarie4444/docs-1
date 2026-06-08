@@ -220,6 +220,12 @@ export const schema: Schema = {
             translatable: true,
             description: 'Optional description for the journey track',
           },
+          timeCommitment: {
+            type: 'string',
+            translatable: true,
+            description:
+              'Optional time commitment displayed as metadata for the track (e.g. "2-4 hours")',
+          },
           guides: {
             type: 'array',
             items: {
@@ -357,6 +363,9 @@ category:
     complexity: {
       type: 'array',
     },
+    surface: {
+      type: 'array',
+    },
     industry: {
       type: 'array',
     },
@@ -397,6 +406,17 @@ category:
         additionalProperties: false,
       },
       description: 'Array of articles to feature in the spotlight section',
+    },
+    // Filters to display on cookbook-style category landing pages.
+    // Allowed values: 'category' (always shown), 'surface', 'complexity'.
+    filters: {
+      type: 'array',
+      items: {
+        type: 'string',
+        enum: ['category', 'surface', 'complexity'],
+      },
+      description:
+        'Which filter menus to display on the category landing page. The category filter is always shown.',
     },
     // Carousels configuration for category landing pages (supports multiple carousels)
     carousels: {

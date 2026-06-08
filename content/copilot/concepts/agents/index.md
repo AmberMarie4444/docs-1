@@ -8,9 +8,12 @@ versions:
 children:
   - /cloud-agent
   - /copilot-cli
+  - /github-copilot-app
   - /code-review
   - /copilot-memory
-  - /about-third-party-agents
+  - /hooks
+  - /about-third-party-coding-agents
+  - /agent-apps
   - /openai-codex
   - /anthropic-claude
   - /about-agent-skills

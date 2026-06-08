@@ -19,8 +19,6 @@ category:
 
 ## Enabling scanning for non-provider patterns
 
-{% data reusables.secret-scanning.non-provider-patterns-beta %}
-
 You can enable scanning for non-provider patterns. Non-provider patterns correspond to secrets such as private keys.
 
 For more information about non-provider patterns, see "{% ifversion fpt or ghec %}[AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#about-user--alerts){% else %}[AUTOTITLE](/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#about-secret-scanning-alerts){% endif %}."
@@ -35,7 +33,3 @@ For more information about non-provider patterns, see "{% ifversion fpt or ghec 
 ### Enabling detection of non-provider patterns for an organization
 
 You can enable scanning for non-provider patterns at the organization level by applying a custom security configuration. For more information, see [AUTOTITLE](/code-security/securing-your-organization/enabling-security-features-in-your-organization/creating-a-custom-security-configuration).
-
-## Further reading
-
-* [AUTOTITLE](/code-security/secret-scanning/managing-alerts-from-secret-scanning)
